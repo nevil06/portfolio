@@ -1,0 +1,119 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: var(--spacing-md) 0;
+    transition: all var(--transition-base);
+    background: transparent;
+}
+
+.navigation.scrolled {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-sm) 0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-family: var(--font-display);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    cursor: pointer;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.nav-links button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-base);
+}
+
+.nav-links button:hover {
+    color: var(--color-primary);
+}
+
+.nav-links button:hover::after {
+    width: 80%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-text-primary);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-lg);
+        gap: var(--spacing-sm);
+        transition: right var(--transition-base);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.active {
+        right: var(--spacing-md);
+    }
+
+    .nav-links button {
+        width: 100%;
+        text-align: left;
+    }
+}
