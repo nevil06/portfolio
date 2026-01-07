@@ -16,7 +16,10 @@ export const fetchGitHubRepos = async () => {
 
         // Filter out specific repos and sort by stars
         const repos = response.data
-            .filter(repo => repo.name.toLowerCase() !== 'n8n')
+            .filter(repo => {
+                const name = repo.name.toLowerCase();
+                return name !== 'n8n' && name !== 'aswsowe';
+            })
             .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
         return repos;
