@@ -36,8 +36,8 @@ const Hero = () => {
                             View Projects
                         </button>
                         <a 
-                            href="/Nevil_Anson_Dsouza_Resume.pdf" 
-                            download="Nevil_Anson_Dsouza_Resume.pdf"
+                            href="/Nevil_Anson_Dsouza_Resume_v2.pdf" 
+                            download="Nevil_Anson_Dsouza_Resume_v2.pdf"
                             className="btn btn-outline"
                         >
                             Download Resume

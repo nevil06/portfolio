@@ -44,13 +44,13 @@ const Projects = () => {
         },
         {
             id: "02",
-            name: "TalkBro",
-            tagline: "Conversations in Real-Time.",
-            description: "An ultra-responsive communication platform built for seamless conversations. Features direct messaging, collaborative threads, and minimal UI overlay, prioritizing message latency and privacy above all.",
-            image: "/talkbro.png",
-            github: "https://github.com/nevil06/talk-bro",
-            live: null,
-            tech: ["React", "Node.js", "WebSockets", "MongoDB"]
+            name: "Meow Extract",
+            tagline: "Instant Website Intelligence.",
+            description: "A high-performance website crawler and scraping engine. Paste any URL or Google Maps link to instantly extract contacts, business info, reviews, SEO metadata, and media assets in under 10 seconds.",
+            image: "/meow-extract.png",
+            github: "https://github.com/nevil06/meow-extarct",
+            live: "https://meowextract.nvevil.xyz",
+            tech: ["Next.js", "Tailwind CSS", "Node.js", "PostgreSQL"]
         },
         {
             id: "03",

@@ -22,7 +22,7 @@ export const fetchGitHubRepos = async () => {
                 const excludedRepos = ['n8n', 'aswsowe'];
                 const explicitProjects = [
                     'context-memo', 'contex-memo', 'talk-bro', 'turn-guard-ai',
-                    'careerforge', 'ble-trust-registry', 'ble_trust-registry'
+                    'meow-extarct', 'careerforge', 'ble-trust-registry', 'ble_trust-registry'
                 ];
                 const isExplicit = explicitProjects.includes(name);
                 return !excludedRepos.includes(name) && (!repo.fork || isExplicit); // Allow forks only if they are explicit projects
@@ -30,7 +30,7 @@ export const fetchGitHubRepos = async () => {
             .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)); // Sort by most recently updated
 
         // Categorize projects for specific components that need filtering
-        const personalProjects = ['context-memo', 'contex-memo', 'talk-bro', 'turn-guard-ai'];
+        const personalProjects = ['context-memo', 'contex-memo', 'talk-bro', 'turn-guard-ai', 'meow-extarct'];
         const groupProjects = ['careerforge', 'ble-trust-registry', 'ble_trust-registry'];
 
         // Separate personal and group projects
